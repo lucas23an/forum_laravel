@@ -40953,7 +40953,7 @@ if (true) {
 /* 19 */
 /***/ (function(module, exports) {
 
-$('document').ready()(function () {
+$(document).ready(function () {
     $('.parallax').parallax();
 });
 
