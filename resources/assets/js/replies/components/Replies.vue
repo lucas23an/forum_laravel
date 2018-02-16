@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Erik replied</span>
+                <span class="card-title">Erik {{ replied }}</span>
 
                 <blockquote>
                     Teste teste teste
@@ -11,7 +11,7 @@
         </div>
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Erik replied</span>
+                <span class="card-title">Erik {{ replied }}</span>
 
                 <blockquote>
                     Teste teste teste
@@ -20,7 +20,7 @@
         </div>
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Erik replied</span>
+                <span class="card-title">Erik {{ replied }}</span>
 
                 <blockquote>
                     Teste teste teste
@@ -29,13 +29,13 @@
         </div>
         <div class="card grey lighten-4">
             <div class="card-content">
-                <span class="card-title">Reply</span>
+                <span class="card-title">{{ reply }}</span>
 
                 <form>
                     <div class="input-field">
-                        <textarea rows="10" class="materialize-textarea" placeholder="Your answer"></textarea>
+                        <textarea rows="10" class="materialize-textarea" :placeholder="yourAnswer"></textarea>
                     </div>
-                    <button type="submit" class="btn red accent-2">Send</button>
+                    <button type="submit" class="btn red accent-2">{{ send }}</button>
                 </form>
             </div>
         </div>
@@ -44,5 +44,11 @@
 
 <script>
     export default {
+        props: [
+            'replied',
+            'reply',
+            'yourAnswer',
+            'send'
+        ]
     }
 </script>

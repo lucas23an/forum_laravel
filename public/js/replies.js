@@ -242,7 +242,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['replied', 'reply', 'yourAnswer', 'send']
+});
 
 /***/ }),
 
@@ -253,67 +255,66 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-content" }, [
-          _c("span", { staticClass: "card-title" }, [_vm._v("Erik replied")]),
-          _vm._v(" "),
-          _c("blockquote", [
-            _vm._v("\n                Teste teste teste\n            ")
-          ])
+  return _c("div", [
+    _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-content" }, [
+        _c("span", { staticClass: "card-title" }, [
+          _vm._v("Erik " + _vm._s(_vm.replied))
+        ]),
+        _vm._v(" "),
+        _c("blockquote", [
+          _vm._v("\n                Teste teste teste\n            ")
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-content" }, [
-          _c("span", { staticClass: "card-title" }, [_vm._v("Erik replied")]),
-          _vm._v(" "),
-          _c("blockquote", [
-            _vm._v("\n                Teste teste teste\n            ")
-          ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-content" }, [
+        _c("span", { staticClass: "card-title" }, [
+          _vm._v("Erik " + _vm._s(_vm.replied))
+        ]),
+        _vm._v(" "),
+        _c("blockquote", [
+          _vm._v("\n                Teste teste teste\n            ")
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-content" }, [
-          _c("span", { staticClass: "card-title" }, [_vm._v("Erik replied")]),
-          _vm._v(" "),
-          _c("blockquote", [
-            _vm._v("\n                Teste teste teste\n            ")
-          ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-content" }, [
+        _c("span", { staticClass: "card-title" }, [
+          _vm._v("Erik " + _vm._s(_vm.replied))
+        ]),
+        _vm._v(" "),
+        _c("blockquote", [
+          _vm._v("\n                Teste teste teste\n            ")
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card grey lighten-4" }, [
-        _c("div", { staticClass: "card-content" }, [
-          _c("span", { staticClass: "card-title" }, [_vm._v("Reply")]),
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card grey lighten-4" }, [
+      _c("div", { staticClass: "card-content" }, [
+        _c("span", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.reply))]),
+        _vm._v(" "),
+        _c("form", [
+          _c("div", { staticClass: "input-field" }, [
+            _c("textarea", {
+              staticClass: "materialize-textarea",
+              attrs: { rows: "10", placeholder: _vm.yourAnswer }
+            })
+          ]),
           _vm._v(" "),
-          _c("form", [
-            _c("div", { staticClass: "input-field" }, [
-              _c("textarea", {
-                staticClass: "materialize-textarea",
-                attrs: { rows: "10", placeholder: "Your answer" }
-              })
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "btn red accent-2", attrs: { type: "submit" } },
-              [_vm._v("Send")]
-            )
-          ])
+          _c(
+            "button",
+            { staticClass: "btn red accent-2", attrs: { type: "submit" } },
+            [_vm._v(_vm._s(_vm.send))]
+          )
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

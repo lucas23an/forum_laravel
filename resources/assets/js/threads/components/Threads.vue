@@ -7,8 +7,8 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Thread</th>
-                        <th>Reply</th>
+                        <th>{{ threads }}</th>
+                        <th>{{ replies }}</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -18,7 +18,7 @@
                         <td>Tópico</td>
                         <td>3</td>
                         <td>
-                            <a href="/threads/1">Open</a>
+                            <a href="/threads/1">{{ open }}</a>
                         </td>
                     </tr>
                 </tbody>
@@ -30,7 +30,10 @@
 <script>
     export default {
         props: [
-            'title'
+            'title',
+            'threads',
+            'replies',
+            'open'
         ]
     }
 </script>
