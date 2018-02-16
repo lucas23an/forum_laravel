@@ -117,7 +117,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['title']
+});
 
 /***/ }),
 
@@ -128,42 +130,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "card" }, [
+    _c("div", { staticClass: "card-content" }, [
+      _c("span", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.title))]),
+      _vm._v(" "),
+      _vm._m(0)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "card-content" }, [
-        _c("span", { staticClass: "card-title" }, [_vm._v("Threads")]),
-        _vm._v(" "),
-        _c("table", [
-          _c("thead", [
-            _c("tr", [
-              _c("th", [_vm._v("#")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Thread")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Reply")]),
-              _vm._v(" "),
-              _c("th")
-            ])
-          ]),
+    return _c("table", [
+      _c("thead", [
+        _c("tr", [
+          _c("th", [_vm._v("#")]),
           _vm._v(" "),
-          _c("tbody", [
-            _c("tr", [
-              _c("td", [_vm._v("1")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Tópico")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("3")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("a", { attrs: { href: "/threads/1" } }, [_vm._v("Open")])
-              ])
-            ])
+          _c("th", [_vm._v("Thread")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Reply")]),
+          _vm._v(" "),
+          _c("th")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tbody", [
+        _c("tr", [
+          _c("td", [_vm._v("1")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("Tópico")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("3")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("a", { attrs: { href: "/threads/1" } }, [_vm._v("Open")])
           ])
         ])
       ])

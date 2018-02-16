@@ -11,7 +11,9 @@
             </div>
         </div>
 
-        <replies></replies>
+        <replies>
+            @include('layouts.default.preloader')
+        </replies>
     </div>
 @endsection
 

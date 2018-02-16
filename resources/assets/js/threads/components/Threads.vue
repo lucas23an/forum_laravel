@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="card-content">
-            <span class="card-title">Threads</span>
+            <span class="card-title">{{ title }}</span>
 
             <table>
                 <thead>
@@ -29,5 +29,8 @@
 
 <script>
     export default {
+        props: [
+            'title'
+        ]
     }
 </script>

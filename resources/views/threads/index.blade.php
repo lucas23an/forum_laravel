@@ -4,8 +4,8 @@
 
     <div class="container">
         <h3>{{ __('Most recent threads') }}</h3>
-        <threads>
-            Carregando
+        <threads title="{{ __('threads') }}">
+            @include('layouts.default.preloader')
         </threads>
     </div>
 @endsection

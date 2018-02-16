@@ -306,7 +306,7 @@ var staticRenderFns = [
             _c(
               "button",
               { staticClass: "btn red accent-2", attrs: { type: "submit" } },
-              [_vm._v("SEND")]
+              [_vm._v("Send")]
             )
           ])
         ])
