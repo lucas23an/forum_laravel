@@ -4,7 +4,7 @@
 
     <div class="container">
         <h3>{{ __('Most recent threads') }}</h3>
-        <threads 
+        <threads
             title="{{ __('Threads') }}"
             threads="{{ __('Threads') }}"
             replies="{{ __('Replies') }}"
