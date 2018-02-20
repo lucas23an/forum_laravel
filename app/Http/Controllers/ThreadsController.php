@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Thread;
+use App\Events\NewThread;
 use Illuminate\Http\Request;
 use App\Http\Requests\ThreadsRequest;
 
@@ -33,6 +34,8 @@ class ThreadsController extends Controller
         $thread->body = $request->input('body');
         $thread->user_id = \Auth::user()->id;
         $thread->save();
+
+        broadcast(new NewThread($thread));
 
         return response()->json(['created' => 'success', 'data' => $thread]);
     }
