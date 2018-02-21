@@ -54,3 +54,18 @@ window.Echo = new Echo({
     cluster: 'us2',
     encrypted: true
 });
+
+import swal from 'sweetalert2'
+
+swal({
+    title: 'Autenticação',
+    text: 'Para acessar este recurso, você precisa estar autenticado! Você será redirecionado',
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Ok',
+    cancelButtonText: 'Não, obrigado!'
+}).then((result) => {
+    if (result.value) {
+        window.location = '/login';
+    }
+})

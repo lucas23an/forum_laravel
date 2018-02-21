@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Reply;
+use App\Events\NewReply;
 use App\Http\Requests\ReplyRequest;
 
 class RepliesController extends Controller
@@ -23,6 +24,8 @@ class RepliesController extends Controller
         $reply->thread_id = $request->input('thread_id');
         $reply->user_id = \Auth::user()->id;
         $reply->save();
+
+        broadcast(new NewReply($reply));
 
         return response()->json($reply);
     }
