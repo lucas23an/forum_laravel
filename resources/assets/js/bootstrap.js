@@ -57,15 +57,44 @@ window.Echo = new Echo({
 
 import swal from 'sweetalert2'
 
-swal({
-    title: 'Autenticação',
-    text: 'Para acessar este recurso, você precisa estar autenticado! Você será redirecionado',
-    type: 'warning',
-    showCancelButton: true,
-    confirmButtonText: 'Ok',
-    cancelButtonText: 'Não, obrigado!'
-}).then((result) => {
-    if (result.value) {
-        window.location = '/login';
+const successCallback = (response) => {
+    return response;
+}
+
+const errorCallback = (error) => {
+    if (error.response.status === 401) {
+        swal({
+            title: 'Autenticação',
+            text: 'Para acessar este recurso, você precisa estar autenticado! Você será redirecionado',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Ok',
+            cancelButtonText: 'Não, obrigado!'
+        }).then((result) => {
+            if (result.value) {
+                window.location = '/login';
+            }
+        })
+    } else {
+        swal({
+            title: 'Erro',
+            text: 'Algo deu errado e não pude resolver, me desculpe',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Ok',
+            cancelButtonText: 'Não, obrigado!'
+        })
     }
+
+    return Promise.reject(error);
+}
+
+window.axios.interceptors.response.use(successCallback, errorCallback)
+
+window.Vue = require('vue');
+
+Vue.component('loader', require('./commons/AxiosLoader.vue'));
+
+const commonApps = new Vue({
+    el: '#loader'
 })
